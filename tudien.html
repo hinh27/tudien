@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="abc">
+<p id="show"></p>
+<button id="nhan_nut" onclick="dichTa()">Dịch</button>
+<script>
+    var soTa = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
+    var soTv =["1","2","3","4","5","6","7","8","9","10"];
+    function dichTa() {
+        let dich = document.getElementById("abc").value;
+        for (let i = 0; i < soTa.length; i++) {
+            if (dich == soTa[i]) {
+                document.getElementById("show").innerHTML = soTa[i] + " - " + soTv[i];
+                break;
+            } else {
+                document.getElementById("show").innerHTML = "Nhập Lại";
+            }
+        }
+    }
+</script>
+</body>
+</html>
